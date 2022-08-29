@@ -2,7 +2,6 @@ package com.lodatutorial.controller;
 
 
 import com.lodatutorial.exception.ResourceNotFoundException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,7 +15,7 @@ public class HandleException
     public ResponseEntity notFoundException(Exception exception) {
         exception.getMessage();
         //return ResponseEntity.ok(exception.getMessage());
-        return ResponseEntity.status(HttpStatus.OK).body(exception.getMessage());
+        return ResponseEntity.status(200).body(exception.getMessage());
     }
 
 }

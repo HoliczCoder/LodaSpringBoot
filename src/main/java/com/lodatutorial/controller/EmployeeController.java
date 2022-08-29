@@ -41,4 +41,15 @@ public class EmployeeController {
     public ResponseEntity<Employee> UpdateEmployee(@RequestBody Employee employee) {
         return ResponseEntity.ok(employeeRepository.save(employee));
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity deleteEmployee(@PathVariable Long id) {
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if (employee.isPresent()) {
+            this.employeeRepository.deleteById(id);
+            return ResponseEntity.status(HttpStatus.OK).body("success");
+        }
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("no data found");
+    }
+
 }
