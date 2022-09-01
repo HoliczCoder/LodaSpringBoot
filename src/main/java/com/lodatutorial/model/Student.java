@@ -21,7 +21,8 @@ public class Student {
     private Long id;
     @Column(name = "name")
     private String name;
-    @JsonIgnore    @ManyToMany(mappedBy = "enrolledStudent")
+    @JsonIgnore
+    @ManyToMany(mappedBy = "enrolledStudent")
 
     Set<Subject> subjects = new HashSet<>();
 }

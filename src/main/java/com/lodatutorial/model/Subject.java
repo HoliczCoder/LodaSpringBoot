@@ -32,7 +32,7 @@ public class Subject {
             name = "student_enrolled",
             joinColumns = @JoinColumn(name = "subject_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id")
-    )
+     )
     private Set<Student> enrolledStudent = new HashSet<>();
 
     public Set<Student> getEnrolledStudent() {
