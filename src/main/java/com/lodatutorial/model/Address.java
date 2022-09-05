@@ -17,6 +17,15 @@ public class Address {
     private String city;
     private String province;
 
+    public Collection<Person> getPersons() {
+        return persons;
+    }
+
+
+//    public void setPersons(Person persons) {
+//        this.persons.add(persons);
+//    }
+
     @OneToMany (mappedBy = "address", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
