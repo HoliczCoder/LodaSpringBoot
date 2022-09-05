@@ -29,7 +29,7 @@ public class PersonController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Person>> getAllPerson (){
+    public ResponseEntity<List<Person>> getAllPerson() {
         return ResponseEntity.ok(personRepository.findAll());
     }
 
@@ -48,7 +48,7 @@ public class PersonController {
         person.setAddress(address);
 //        address.setPersons(Collections.singleton(person));
 //        address.getPersons().add(person);
-//        addressRepository.save(address);
+        //       addressRepository.save(address);
         personRepository.save(person);
         return ResponseEntity.ok(new PersonDto(person));
     }

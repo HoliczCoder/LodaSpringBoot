@@ -18,7 +18,6 @@ public class Person {
     @NotNull
     private String name;
 
-
     @ManyToOne
     @JoinColumn (name = "address_id")
     @EqualsAndHashCode.Exclude
