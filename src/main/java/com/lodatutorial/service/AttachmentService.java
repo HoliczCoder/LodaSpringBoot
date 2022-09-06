@@ -1,0 +1,8 @@
+package com.lodatutorial.service;
+
+import com.lodatutorial.entity.Attachment;
+import org.springframework.web.multipart.MultipartFile;
+
+public interface AttachmentService {
+    Attachment saveAttachment(MultipartFile file) throws Exception;
+}

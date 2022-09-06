@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException (String message){
         super(message);
-        System.out.println("hello world");
         // cho nay massage se duoc day vao trong class cha exception roi dunng handle exception de goi ra
 
     }
